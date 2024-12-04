@@ -18,7 +18,7 @@ contract DiamondTest is Test {
         DiamondCutFacet.FacetCut[] memory cut;
         bytes4[] memory selectors;
         selectors[0] = ExampleFacet.exampleFunction.selector;
-        DiamondCutFacet.FacetCut memory cutItem = DiamondCutFacet.FacetCut({
+        cut[0] = DiamondCutFacet.FacetCut({
             facetAddress: address(exampleFacet),
             action: DiamondCutFacet.FacetCutAction.Add,
             functionSelectors: selectors
